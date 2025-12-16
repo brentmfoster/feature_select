@@ -20,6 +20,7 @@ For the purposes of this assignment, I have generated a simplified synthetic dat
 Figure 1. Random Forest and Gradient Boosting classifiers performed better than AdaBoost at predicting the simulated cell type (accuracy scores: Random Forest (0.9880), Gradient Boosting (0.9840), Adaboost (0.6920)). 
 
 <img width="650" height="440" alt="download" src="https://github.com/user-attachments/assets/0fda6e75-e3dd-4dfb-9982-709541360047" />
+
 Figure 2. Simulated cells show a distinct developmental trajectory.
 
 ## Conclusions
