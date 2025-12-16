@@ -59,7 +59,7 @@ def preprocess_dataframe():
 
 def model_parameters(transposed_counts):
     """
-    INPUT: Transposed_counts (panda dataframe OUTPUT from preprocess_dataframe())
+    INPUT: transposed_counts (panda dataframe OUTPUT from preprocess_dataframe())
     Set up the parameters for training the models.
     OUTPUT: A list of all of the parameters
     """
@@ -163,7 +163,7 @@ def run_model(parameters):
 
 def plot_umap(transposed_counts, parameters):
     """
-    INPUT: transposed_counts matrix, parameters list
+    INPUT: transposed_counts matrix (OUTPUT from preprocess_dataframe()), parameters list (OUTPUT from model_parameters())
     Plot a umap to show the cell types that make up a developmental trajectory.
     OUTPUT: UMAP projection
     """
