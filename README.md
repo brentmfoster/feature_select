@@ -24,7 +24,9 @@ Figure 1. Random Forest and Gradient Boosting classifiers performed better than 
 Figure 2. Simulated cells show a distinct developmental trajectory.
 
 ## Conclusions
-The feature selection-classifier pipeline appears to yield 'accurate' cell type predictions (Figure 1). However, this dataset is likely grossly oversimplified, as there appears to be very little biological noise in the UMAP (Figure 2). This leads me to believe that the models are most likely overfitting. It would be interesting to see if I get the same results with more complex simulations or real-world scRNA-seq data. And, while the script is functional, there appears is a warning when loading the 'umap' module. 
+There is a warning that recommends updating jupyter and ipywidgets to view a progress bar while the UMAP is loading. Since the script is functional, I elected to ignore this warning.
+
+The feature selection-classifier pipeline appears to yield 'accurate' cell type predictions (Figure 1). However, this dataset is likely grossly oversimplified, as there appears to be very little biological noise in the UMAP (Figure 2). This leads me to believe that the models are most likely overfitting. It would be interesting to see if I get the same results with more complex simulations or real-world scRNA-seq data.
 
 ## References
 Ramsköld, D., Wang, E.T., Burge, C.B., and Sandberg, R. (2009). An abundance of ubiquitously expressed genes revealed by tissue transcriptome data. PLoS Comput. Biol. https://doi.org/10.1371/journal.pcbi.1000598.
