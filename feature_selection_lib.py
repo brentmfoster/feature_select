@@ -135,7 +135,7 @@ def run_model(parameters):
             "Classification Report": report
         }
 
-        # Print the reports
+        # Print the accuracy scores and classification reports
         print(f"{name} Accuracy: {accuracy:.4f}")
         print(f"{name} Classification Report:\n{report}")
 
@@ -151,8 +151,8 @@ def run_model(parameters):
             yticklabels=cell_types
         )
         ax.set_title(f'{name} Confusion Matrix')
-        ax.set_xlabel('Predicted')
-        ax.set_ylabel('Actual')
+        ax.set_xlabel('Predicted cell type')
+        ax.set_ylabel('Actual cell type')
 
     # Show the final plot with the confusion matrices for each model
     plt.tight_layout()
