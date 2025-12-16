@@ -92,7 +92,7 @@ def run_model(parameters):
     List the models to test, loop over feature selection - classifier, fit and evaluate the model.
     OUTPUT: Model accuracy score, Classification report, Confusion matrices.
     """
-    # List all the models to be tested
+    # Make a dictionary of all the models to be tested
     models = {
         "Random Forest": RandomForestClassifier(n_estimators=1000, random_state=42),
         "Gradient Boosting": GradientBoostingClassifier(random_state=42),
@@ -106,7 +106,7 @@ def run_model(parameters):
     n_models = len(models)
 
     # Create empty subplots (1 row, n_models columns)
-    fig, axes = plt.subplots(1, n_models, figsize=(6 * n_models, 6))
+    fig, axes = plt.subplots(1, n_models, figsize = (6 * n_models, 6))
 
     results = {}
 
@@ -149,8 +149,8 @@ def run_model(parameters):
             fmt='d',
             cmap='Blues',
             ax=ax,
-            xticklabels=cell_types,
-            yticklabels=cell_types
+            xticklabels = cell_types,
+            yticklabels = cell_types
         )
         ax.set_title(f'{name} Confusion Matrix')
         ax.set_xlabel('Predicted cell type')
