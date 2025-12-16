@@ -4,7 +4,7 @@
 ## Introduction
 Single-cell RNA sequencing (scRNA-seq) captures active transcripts at a cellular resolution. While extremely useful, scRNA-seq datasets can be extremely large, with tens to hundreds of thousands of genes (features) expressed in each individual cell (sample). Such high-dimensional datasets present a major challenge for evolutionary and developmental biologists who are interested in distinguishing genes that are most informative of distinct cell types from general housekeeping genes and/or experimental noise. One key assumption of scRNA-seq is that a relatively small number of expressed genes are sufficient to predict specific cell types (Ramsköld et al., 2009). If we accept this assumption, then the dimensionality problem can be viewed as a feature sorting/selection problem, where genes are features and cell identity is the classifier target (Radley et al., 2023).
 
-For the purposes of this assignment, I have generated a simplified synthetic dataset consisting of 500 genes and 1000 cells representing 9 cell types (Li et al., 2025). I then apply a basic machine learning pipeline that selects important features prior to classification.
+For the purposes of this assignment, I have generated a simplified synthetic dataset consisting of 500 genes and 1000 cells representing 9 cell types (Li et al., 2025). I then apply a basic machine learning pipeline that selects important features prior to classification and plot a basic UMAP.
 
 ## Methods
 ### *Files*
@@ -13,11 +13,17 @@ For the purposes of this assignment, I have generated a simplified synthetic dat
 - 'requirements.txt' - Jupyter lab version and dependency information
 - 'scMultiSim_counts_SIMPLE.csv' - Synthetic scRNA-seq counts generated with scMultiSim software (Li et al., 2025) in R Studio (Posit team, 2025). Note that genes are rows and cells are columns.
 
-#### Please note that the code may take a few minutes to run.
+#### Please note that the script may take a few minutes to run.
 
-## Results & Conclusions
+## Results
 <img width="1760" height="590" alt="download" src="https://github.com/user-attachments/assets/485c02f3-1c09-40ba-8277-8aeebcd7d71f" />
 Figure 1. Random Forest and Gradient Boosting classifiers performed better than AdaBoost at predicting the simulated cell type (accuracy scores: Random Forest (0.9880), Gradient Boosting (0.9840), Adaboost (0.6920)). 
+
+<img width="650" height="440" alt="download" src="https://github.com/user-attachments/assets/0fda6e75-e3dd-4dfb-9982-709541360047" />
+Figure 2. Simulated cells show a distinct developmental trajectory.
+
+## Conclusions
+The feature selection-classifier pipeline appears to yield 'accurate' cell type predictions (Figure 1). However, this dataset is likely grossly oversimplified, as there appears to be very little biological noise in the UMAP (Figure 2). This leads me to believe that the models are most likely overfitting. It would be interesting to see if I get the same results with more complex simulations or real-world scRNA-seq data. And, while the script is functional, there appears is a warning when loading the 'umap' module. 
 
 ## References
 Ramsköld, D., Wang, E.T., Burge, C.B., and Sandberg, R. (2009). An abundance of ubiquitously expressed genes revealed by tissue transcriptome data. PLoS Comput. Biol. https://doi.org/10.1371/journal.pcbi.1000598.
