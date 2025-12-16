@@ -9,5 +9,8 @@ transposed_counts
 parameters = fsl.model_parameters(transposed_counts)
 
 # Loop over feature selection-classifier pipeline, fit the model,
-# evaluate with confusion matrix plots
+# evaluate with accuracy scores, classificatin reports, confusion matrix plots
 fsl.run_model(parameters)
+
+# Plot a UMAP that shows trajectory
+fsl.plot_umap(transposed_counts, parameters)
