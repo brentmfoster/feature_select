@@ -13,13 +13,11 @@ For the purposes of this assignment, I have generated a simplified synthetic dat
 - 'requirements.txt' - Jupyter lab version and dependency information
 - 'scMultiSim_counts_SIMPLE.csv' - Synthetic scRNA-seq counts generated with scMultiSim software (Li et al., 2025) in R Studio (Posit team, 2025). Note that genes are rows and cells are columns.
 
-
 #### Please note that the code may take a few minutes to run.
 
-## Results
-Random Forest and Gradient Boosting classifiers performed much better than AdaBoost at predicting the simulated cell type from (Figure 1).
-
-## Conclusions
+## Results & Conclusions
+<img width="1760" height="590" alt="download" src="https://github.com/user-attachments/assets/485c02f3-1c09-40ba-8277-8aeebcd7d71f" />
+Figure 1. Random Forest and Gradient Boosting classifiers performed better than AdaBoost at predicting the simulated cell type (accuracy scores: Random Forest (0.9880), Gradient Boosting (0.9840), Adaboost (0.6920)). 
 
 ## References
 Ramsköld, D., Wang, E.T., Burge, C.B., and Sandberg, R. (2009). An abundance of ubiquitously expressed genes revealed by tissue transcriptome data. PLoS Comput. Biol. https://doi.org/10.1371/journal.pcbi.1000598.
