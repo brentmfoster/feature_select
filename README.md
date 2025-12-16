@@ -1,15 +1,17 @@
-# feature_select
+# Feature Select
+#### *Brent Foster, 2025*
 
 ## Introduction
 Single-cell RNA sequencing (scRNA-seq) captures active transcripts at a cellular resolution. While extremely useful, scRNA-seq datasets can be extremely large, with tens to hundreds of thousands of genes (features) expressed in each individual cell (sample). Such high-dimensional datasets present a major challenge for evolutionary and developmental biologists who are interested in distinguishing genes that are most informative of distinct cell types from general housekeeping genes and/or experimental noise. One key assumption of scRNA-seq is that a relatively small number of expressed genes are sufficient to predict specific cell types (Ramsköld et al., 2009). If we accept this assumption, then the dimensionality problem can be viewed as a feature sorting/selection problem, where genes are features and cell identity is the classifier target (Radley et al., 2023).
 
-For the purposes of this assignment, I have generated a synthetic dataset consisting of 500 genes and 1000 cells representing 9 cell types (Li et al., 2025). I then apply a basic machine learning pipeline that selects important features prior to classification.
+For the purposes of this assignment, I have generated a simplified synthetic dataset consisting of 500 genes and 1000 cells representing 9 cell types (Li et al., 2025). I then apply a basic machine learning pipeline that selects important features prior to classification.
 
 ## Methods
-### Files
+### *Files*
 - 'requirements.txt' - Jupyter lab version and dependency information
 - 'scMultiSim_counts.csv' - Synthetic scRNA-seq counts generated with scMultiSim software (Li et al., 2025) in R Studio (Posit team, 2025). Note that genes are rows and cells are columns.
 - 'feature_select.py' - A script that selects important features and classifies cell type. 'scMultiSim_counts.csv' is loaded as a panda data frame, then filtered and transposed such that genes (i.e. features) are columns and cells (i.e. targets) are rows. Feature selection and classification were encoded using the instructions from ‘Feature selection as part of a pipeline’ (scikit-learn, 1.13.6). Code adapted from my group’s presentation loops through the following three classifier models for final evaluation: Random Forest, Gradient Boosting, and AdaBoost.
+- 'feature_slection_lib.py' - A library containing the necessary modules to import and function definitions.
 
 #### Please note that the code may take a few minutes to run.
 
