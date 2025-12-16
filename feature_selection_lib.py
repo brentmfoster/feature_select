@@ -10,6 +10,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectFromModel
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
+import numpy as np
+import umap
 
 
 def preprocess_dataframe():
@@ -156,4 +158,52 @@ def run_model(parameters):
 
     # Show the final plot with the confusion matrices for each model
     plt.tight_layout()
+    plt.show()
+
+
+def plot_umap(transposed_counts, parameters):
+    """
+    INPUT: transposed_counts matrix, parameters list
+    Plot a umap to show the cell types that make up a developmental trajectory.
+    OUTPUT: UMAP projection
+    """
+    reducer = umap.UMAP()
+
+    data = transposed_counts.values
+    scaled_data = StandardScaler().fit_transform(data)
+
+    embedding = reducer.fit_transform(scaled_data)
+
+    # Convert y = parameters[1] to numeric value
+    classes, y_numeric = np.unique(parameters[1], return_inverse=True)
+
+    # Embed the cells in the umap projection
+    scatter = plt.scatter(
+        embedding[:, 0],
+        embedding[:, 1],
+        c=y_numeric,
+        cmap = "rainbow",
+    )
+    plt.gca().set_aspect('equal', 'datalim')
+    plt.title('UMAP projection of scMultiSim dataset', fontsize=18)
+
+    # Add legend
+    handles = []
+    for i, class_name in enumerate(classes):
+        handles.append(
+            plt.Line2D(
+                [0], 
+                [0], 
+                marker = 'o', 
+                color = 'w', 
+                label = class_name,
+                markerfacecolor = plt.cm.rainbow(i / len(classes)),
+                markersize=8)
+        )
+
+    plt.legend(
+        handles = handles, 
+        title = "Cell IDs", 
+        bbox_to_anchor = (1.05, 1), 
+        loc='upper left')
     plt.show()
