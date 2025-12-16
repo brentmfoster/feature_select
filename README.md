@@ -6,7 +6,7 @@ Single-cell RNA sequencing (scRNA-seq) captures active transcripts at a cellular
 For the purposes of this assignment, I have generated a synthetic dataset consisting of 500 genes and 1000 cells representing 9 cell types (Li et al., 2025). I then apply a basic machine learning pipeline that selects important features prior to classification.
 
 ## Methods
-## Files
+### Files
 - 'requirements.txt' - Jupyter lab version and dependency information
 - 'scMultiSim_counts.csv' - Synthetic scRNA-seq counts generated with scMultiSim software (Li et al., 2025) in R Studio (Posit team, 2025). Note that genes are rows and cells are columns.
 - 'feature_select.py' - A script that selects important features and classifies cell type. 'scMultiSim_counts.csv' is loaded as a panda data frame, then filtered and transposed such that genes (i.e. features) are columns and cells (i.e. targets) are rows. Feature selection and classification were encoded using the instructions from ‘Feature selection as part of a pipeline’ (scikit-learn, 1.13.6). Code adapted from my group’s presentation loops through the following three classifier models for final evaluation: Random Forest, Gradient Boosting, and AdaBoost.
