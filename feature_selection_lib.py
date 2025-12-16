@@ -14,7 +14,7 @@ import numpy as np
 import umap
 
 
-def preprocess_dataframe():
+def preprocess_dataframe(counts):
     """
     Input: CSV counts matrix from scMultiSim
     Load the counts matrix, remove 0 counts, standardise gene labels & cell labels, transpose dataframe.
