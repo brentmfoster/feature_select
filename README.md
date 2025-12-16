@@ -13,12 +13,15 @@ For the purposes of this assignment, I have generated a simplified synthetic dat
 - 'requirements.txt' - Jupyter lab version and dependency information
 - 'scMultiSim_counts_SIMPLE.csv' - Synthetic scRNA-seq counts generated with scMultiSim software (Li et al., 2025) in R Studio (Posit team, 2025). Note that genes are rows and cells are columns.
 
+#### Please note that scripts have been saved as python files. 
+
 ### *Installation*
 In your terminal, create feature_select directory (or a name of your choice). CD to that directory and run the following:
 - uv init --bare
 - uv add jupyterlab numpy pandas scikit-learn seaborn umap-learn (check the requirements.txt file for dependency versions).
+- python files can be run from the Jupyter Lab terminal
 
-#### Please note that the script may take a few minutes to run.
+#### Please note that the script may take a few minutes to run. 
 
 ## Results
 <img width="1760" height="590" alt="download" src="https://github.com/user-attachments/assets/485c02f3-1c09-40ba-8277-8aeebcd7d71f" />
