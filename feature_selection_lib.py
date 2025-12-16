@@ -20,13 +20,6 @@ def preprocess_dataframe():
     Load the counts matrix, remove 0 counts, standardise gene labels & cell labels, transpose dataframe.
     Output: preprocessed & transposed panda data frame
     """
-    # Load counts matrix as panda data frame
-    counts = pd.read_csv(
-        "scMultiSim_counts_SIMPLE.csv",
-        index_col=0,
-        dtype=str
-    )
-
     # Remove any genes that are all 0 counts
     counts = counts.drop(counts[(counts == 0).all(axis=1)].index)
 
