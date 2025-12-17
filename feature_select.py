@@ -21,9 +21,11 @@ parameters = fsl.model_parameters(transposed_counts)
 
 # Loop over feature selection-classifier pipeline, fit the model,
 # evaluate with accuracy scores, classificatin reports, confusion matrix plots
-print(f"Running model loop")
+print(f"Comparing model accuracy scores, classification reports & confusion matrices")
 fsl.run_model(parameters)
 
 # Plot a UMAP that shows trajectory
-print(f"Plotting UMAP")
+print(f"Plotting cell trajectory UMAP")
 fsl.plot_umap(transposed_counts, parameters)
+
+print(f"Feature select is finished running!")
