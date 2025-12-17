@@ -33,8 +33,6 @@ Figure 1. Random Forest and Gradient Boosting classifiers performed better than 
 Figure 2. Simulated cells show a distinct developmental trajectory.
 
 ## Summary
-When running 'feature_select.py', there is a warning that recommends updating jupyter and ipywidgets to view a progress bar while the UMAP is loading. Since the script is functional, I elected to ignore this warning.
-
 The feature selection-classifier pipeline appears to yield 'accurate' cell type predictions (Figure 1; see also the accuracy score and classification report outputs). However, this dataset is likely grossly oversimplified, as there appears to be very little biological noise in the UMAP (Figure 2). It would be interesting to see if I get the same results with more complex simulations or real-world scRNA-seq data. In the future, I would also be interested in working out a feature ranking algorithm that gives me X number of top-ranked genes for each cell type.
 
 ## References
