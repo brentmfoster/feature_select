@@ -18,7 +18,7 @@ For the purposes of this assignment, I have generated a simplified synthetic dat
 ### *Installation*
 In your terminal, create feature_select directory (or a name of your choice). CD to that directory and run the following:
 - uv init --bare
-- uv add jupyterlab string numpy pandas scikit-learn seaborn umap-learn (check the requirements.txt file for dependency versions)
+- uv add jupyterlab numpy pandas scikit-learn seaborn umap-learn (check the requirements.txt file for dependency versions)
 - uv run jupyter lab
 - Add 'feature_select.py', 'feature_selection_lib.py', and 'scMultiSim_counts_SIMPLE.csv' to the same working directory in Jupyter Lab 
 - Run 'feature_select.py' from the Jupyter Lab terminal or from your own terminal
