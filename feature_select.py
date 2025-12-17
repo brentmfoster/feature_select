@@ -16,7 +16,7 @@ transposed_counts = fsl.preprocess_dataframe(counts)
 transposed_counts
 
 # Define parameters & scale the data
-print(f"Defining model parameters & scaling the data")
+print(f"Defining model parameters & scaling data")
 parameters = fsl.model_parameters(transposed_counts)
 
 # Loop over feature selection-classifier pipeline, fit the model,
