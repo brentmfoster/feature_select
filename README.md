@@ -21,7 +21,7 @@ In your terminal, create feature_select directory (or a name of your choice). Ch
 - uv add jupyterlab numpy pandas scikit-learn seaborn umap-learn (check the requirements.txt file for dependency versions)
 - uv run jupyter lab
 - Add 'feature_select.py', 'feature_selection_lib.py', and 'scMultiSim_counts_SIMPLE.csv' to the same working directory in Jupyter Lab
-- 'feature_select.py' can be run from Jupyter Lab terminal (alternatively, run from your own terminal using the provided files) 
+- 'feature_select.py' can be run from Jupyter Lab terminal (alternatively, run from your own terminal using the files provided) 
 
 ## Results
 <img width="1760" height="590" alt="download" src="https://github.com/user-attachments/assets/25cffc3d-ee43-4b94-a893-cb9efcbddc48" />
