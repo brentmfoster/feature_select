@@ -21,7 +21,7 @@ parameters = fsl.model_parameters(transposed_counts)
 
 # Loop over feature selection-classifier pipeline, fit the model,
 # evaluate with accuracy scores, classificatin reports, confusion matrix plots
-print(f"\nComparing model accuracy scores, classification reports & confusion matrices")
+print(f"\nComparing model accuracy scores, classification reports & confusion matrices\n")
 fsl.run_model(parameters)
 
 # Plot a UMAP that shows cell trajectory
