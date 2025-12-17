@@ -8,7 +8,7 @@ For the purposes of this assignment, I have generated a simplified synthetic dat
 
 ## Methods
 ### *Files*
-- 'feature_select.py' - A script that selects important features and classifies cell type. 'scMultiSim_counts.csv' is loaded as a panda data frame, then filtered and transposed such that genes (i.e. features) are columns and cells (i.e. targets) are rows. Feature selection and classification were encoded using the instructions from ‘Feature selection as part of a pipeline’ (scikit-learn, 1.13.6). Code adapted from my group’s presentation loops through a feature selection-classifier pipeline using the following three models for final evaluation: Random Forest, Gradient Boosting, and AdaBoost. The final UMAP was encoded using instructions from online documentation for umap-learn (https://umap-learn.readthedocs.io/en/latest/basic_usage.html).
+- 'feature_select.py' - A script that selects important features and classifies cell type. 'scMultiSim_counts.csv' is loaded as a panda data frame, then filtered and transposed such that genes (i.e. features) are columns and cells (i.e. targets) are rows. Feature selection and classification were encoded using the instructions from ‘Feature selection as part of a pipeline’ (Pedregosa et al., 2011; scikit-learn, 1.13.6). Code adapted from my group’s presentation loops through a feature selection-classifier pipeline using the following three models for final evaluation: Random Forest, Gradient Boosting, and AdaBoost. The final UMAP was encoded using instructions from online documentation for umap-learn (McInnes et al., 2018; umap-learn, 0.5.8).
 - 'feature_selection_lib.py' - A library containing the necessary modules to import and definitions of functions used in the script.
 - 'requirements.txt' - Jupyter Lab version and dependency information
 - 'scMultiSim_counts_SIMPLE.csv' - Synthetic scRNA-seq counts generated with scMultiSim software (Li et al., 2025) in R Studio (Posit team, 2025). Note that in the original dataframe, genes are rows and cells are columns.
@@ -41,6 +41,10 @@ The feature selection-classifier pipeline appears to yield 'accurate' cell type 
 Ramsköld, D., Wang, E.T., Burge, C.B., and Sandberg, R. (2009). An abundance of ubiquitously expressed genes revealed by tissue transcriptome data. PLoS Comput. Biol. https://doi.org/10.1371/journal.pcbi.1000598.
 
 Radley, A., Corujo-Simon, E., Nichols, J., Smith, A., Dunn, S.J. (2023). Entropy sorting of single-cell RNA sequencing data reveals the inner cell mass in the human pre-implantation embryo. Stem Cell Reports. https://doi.org/10.1016/j.stemcr.2022.09.007
+
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O.., Blondel, Ml., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., Duchesnay, E. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research. https://scikit-learn.org/stable/modules/feature_selection.html
+
+McInnes, L., Healy, J., Saul, N., Grossberger, L. (2018). UMAP: Uniform Manifold Approximation and Projection. The Journal of Open Source Software. https://umap-learn.readthedocs.io/en/latest/basic_usage.html
 
 Li, H., Zhang, Z., Squires, M., Chen, X., Zhang, X. (2025). scMultiSim: simulation of single-cell multi-omics and spatial data guided by gene regulatory networks and cell-cell interactions. Nature Methods. https://doi.org/10.1038/s41592-025-02651-0
 
