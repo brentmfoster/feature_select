@@ -24,7 +24,7 @@ parameters = fsl.model_parameters(transposed_counts)
 print(f"Comparing model accuracy scores, classification reports & confusion matrices")
 fsl.run_model(parameters)
 
-# Plot a UMAP that shows trajectory
+# Plot a UMAP that shows cell trajectory
 print(f"Plotting cell trajectory UMAP")
 fsl.plot_umap(transposed_counts, parameters)
 
