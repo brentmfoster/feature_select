@@ -2,7 +2,7 @@ import feature_select_lib as fsl
 import pandas as pd
 
 # Load the counts dataframe
-print(f"\nLoading counts dataframe")
+print(f"Loading counts dataframe")
 counts = pd.read_csv(
     "scMultiSim_counts_SIMPLE.csv",
     index_col=0,
@@ -12,6 +12,7 @@ counts = pd.read_csv(
 # Preprocess the counts dataframe
 print(f"\nPreprocessing counts dataframe")
 transposed_counts = fsl.preprocess_dataframe(counts)
+
 # Check that gene names are columns (gene1-geneX) & the index is cell types (A-I)
 transposed_counts
 
