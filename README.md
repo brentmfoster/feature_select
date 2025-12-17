@@ -10,7 +10,7 @@ For the purposes of this assignment, I have generated a simplified synthetic dat
 ### *Files*
 - 'feature_select.py' - A script that selects important features and classifies cell type. 'scMultiSim_counts.csv' is loaded as a panda data frame, then filtered and transposed such that genes (i.e. features) are columns and cells (i.e. targets) are rows. Feature selection and classification were encoded using the instructions from ‘Feature selection as part of a pipeline’ (Pedregosa et al., 2011; scikit-learn, 1.13.6). Code adapted from my group’s presentation loops through a feature selection-classifier pipeline using the following three models for final evaluation: Random Forest, Gradient Boosting, and AdaBoost. The final UMAP was encoded using instructions from online documentation for umap-learn (McInnes et al., 2018; umap-learn, 0.5.8).
 - 'feature_selection_lib.py' - A library containing the necessary modules to import and definitions of functions used in the script.
-- 'requirements.txt' - Jupyter Lab version and dependency information
+- 'requirements.txt' - Jupyter Lab version and dependency information, taken from pyproject.toml
 - 'scMultiSim_counts_SIMPLE.csv' - Synthetic scRNA-seq counts generated with scMultiSim software (Li et al., 2025) in R Studio (Posit team, 2025). Note that in the original dataframe, genes are rows and cells are columns.
 
 #### Please note that scripts have been saved as python (.py) files. 
