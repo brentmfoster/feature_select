@@ -16,7 +16,7 @@ For the purposes of this assignment, I have generated a simplified synthetic dat
 #### Please note that scripts have been saved as python files. 
 
 ### *Installation*
-In your terminal, create feature_select directory (or a name of your choice). CD to that directory and run the following:
+In your terminal, create feature_select directory (or a name of your choice). Change to that new directory and run the following:
 - uv init --bare
 - uv add jupyterlab numpy pandas scikit-learn seaborn umap-learn (check the requirements.txt file for dependency versions)
 - uv run jupyter lab
